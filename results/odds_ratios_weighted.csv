@@ -1,0 +1,13 @@
+"","OR","lower","upper","p"
+"Age (per year)",0.956,0.933,0.979,0
+"Female",1.079,0.908,1.282,0.388
+"Race: Black",0.954,0.724,1.256,0.736
+"Race: American Indian/Alaska Native",1.754,0.966,3.185,0.065
+"Race: Asian",0.992,0.676,1.457,0.969
+"Race: Native Hawaiian/Pacific Islander",1.528,0.434,5.375,0.509
+"Race: Two or more races",1.347,0.932,1.947,0.113
+"ADHD",3.261,2.578,4.125,0
+"Depression",3.657,2.703,4.947,0
+"Chronic physical pain",2.879,2.157,3.842,0
+"Parent education: High school",1.189,0.747,1.893,0.465
+"Parent education: More than high school",1.004,0.655,1.539,0.987

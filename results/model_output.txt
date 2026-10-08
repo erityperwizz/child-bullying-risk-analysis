@@ -1,0 +1,103 @@
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Loading required package: carData
+
+Attaching package: 'car'
+
+The following object is masked from 'package:dplyr':
+
+    recode
+
+Loading required package: grid
+Loading required package: Matrix
+Loading required package: survival
+
+Attaching package: 'survey'
+
+The following object is masked from 'package:graphics':
+
+    dotchart
+
+Children aged 6 to 17 with complete data: 15040 
+Share ever bullied (unweighted): 23.3 %
+               GVIF Df GVIF^(1/(2*Df))
+age        1.042272  1        1.020917
+female     1.022265  1        1.011071
+race       1.021089  5        1.002089
+adhd       1.086870  1        1.042531
+depression 1.121488  1        1.059003
+pain       1.051676  1        1.025512
+parent_edu 1.012705  2        1.003161
+
+Call:
+glm(formula = bullied ~ age + female + race + adhd + depression + 
+    pain + parent_edu, family = binomial, data = model_df)
+
+Coefficients:
+                                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                          -0.819984   0.154281  -5.315 1.07e-07 ***
+age                                  -0.060001   0.006077  -9.874  < 2e-16 ***
+female                                0.035649   0.041243   0.864  0.38739    
+raceBlack                            -0.252765   0.082426  -3.067  0.00217 ** 
+raceAmerican Indian/Alaska Native     0.571067   0.203915   2.801  0.00510 ** 
+raceAsian                            -0.312441   0.102150  -3.059  0.00222 ** 
+raceNative Hawaiian/Pacific Islander  0.142614   0.335923   0.425  0.67117    
+raceTwo or more races                -0.020275   0.078544  -0.258  0.79630    
+adhd                                  1.106014   0.054108  20.441  < 2e-16 ***
+depression                            1.385146   0.075944  18.239  < 2e-16 ***
+pain                                  0.780038   0.065308  11.944  < 2e-16 ***
+parent_eduHigh school                 0.237864   0.144618   1.645  0.10002    
+parent_eduMore than high school      -0.054493   0.136472  -0.399  0.68967    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 16338  on 15039  degrees of freedom
+Residual deviance: 15044  on 15027  degrees of freedom
+AIC: 15070
+
+Number of Fisher Scoring iterations: 4
+
+                                        OR lower upper     p
+(Intercept)                          0.440 0.326 0.596 0.000
+age                                  0.942 0.931 0.953 0.000
+female                               1.036 0.956 1.124 0.387
+raceBlack                            0.777 0.661 0.913 0.002
+raceAmerican Indian/Alaska Native    1.770 1.187 2.640 0.005
+raceAsian                            0.732 0.599 0.894 0.002
+raceNative Hawaiian/Pacific Islander 1.153 0.597 2.228 0.671
+raceTwo or more races                0.980 0.840 1.143 0.796
+adhd                                 3.022 2.718 3.360 0.000
+depression                           3.995 3.443 4.637 0.000
+pain                                 2.182 1.919 2.479 0.000
+parent_eduHigh school                1.269 0.955 1.684 0.100
+parent_eduMore than high school      0.947 0.725 1.237 0.690
+Weighted share ever bullied: 20.6 %
+                                        OR lower upper     p
+(Intercept)                          0.274 0.167 0.449 0.000
+age                                  0.956 0.933 0.979 0.000
+female                               1.079 0.908 1.282 0.388
+raceBlack                            0.954 0.724 1.256 0.736
+raceAmerican Indian/Alaska Native    1.754 0.966 3.185 0.065
+raceAsian                            0.992 0.676 1.457 0.969
+raceNative Hawaiian/Pacific Islander 1.528 0.434 5.375 0.509
+raceTwo or more races                1.347 0.932 1.947 0.113
+adhd                                 3.261 2.578 4.125 0.000
+depression                           3.657 2.703 4.947 0.000
+pain                                 2.879 2.157 3.842 0.000
+parent_eduHigh school                1.189 0.747 1.893 0.465
+parent_eduMore than high school      1.004 0.655 1.539 0.987
+McFadden pseudo R2: 0.079 
+AUC: 0.672 
+null device 
+          1 
